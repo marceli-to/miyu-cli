@@ -2,8 +2,6 @@
 
 A simple, stylish CLI for chatting with local [Ollama](https://ollama.ai) models.
 
-![miyu](https://img.shields.io/npm/v/miyu-cli?color=ff6b6b&label=npm)
-
 ## Install
 
 ```bash
