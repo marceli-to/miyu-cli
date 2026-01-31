@@ -7,7 +7,12 @@ A simple, stylish CLI for chatting with local [Ollama](https://ollama.ai) models
 ## Install
 
 ```bash
-npm install -g miyu-cli
+curl -fsSL https://raw.githubusercontent.com/marceli-to/miyu-cli/main/install.sh | bash
+```
+
+Or via npm:
+```bash
+npm install -g github:marceli-to/miyu-cli
 ```
 
 Make sure [Ollama](https://ollama.ai) is running locally.
