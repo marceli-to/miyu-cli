@@ -1,0 +1,36 @@
+{
+  "name": "miyu-cli",
+  "version": "1.0.0",
+  "description": "Simple, stylish CLI for chatting with local Ollama models",
+  "type": "module",
+  "bin": {
+    "miyu": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marceli-to/miyu-cli.git"
+  },
+  "keywords": [
+    "ollama",
+    "llama",
+    "cli",
+    "ai",
+    "chat",
+    "llm",
+    "local"
+  ],
+  "author": "marceli-to",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marceli-to/miyu-cli/issues"
+  },
+  "homepage": "https://github.com/marceli-to/miyu-cli#readme",
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "commander": "^12.1.0",
+    "gradient-string": "^3.0.0",
+    "ollama": "^0.5.11",
+    "ora": "^9.1.0"
+  }
+}
