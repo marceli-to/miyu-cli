@@ -11,6 +11,8 @@
 
 A simple, stylish CLI for chatting with local [Ollama](https://ollama.ai) models.
 
+> **Note:** miyu runs in your terminal. Open Terminal (macOS) or your preferred command line app to use it.
+
 ## Install
 
 ```bash
