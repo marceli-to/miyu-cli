@@ -42,19 +42,43 @@ fi
 
 echo -e "  ${GREEN}✓${NC} npm found"
 
+# Check for Ollama
+if ! command -v ollama &> /dev/null; then
+    echo ""
+    echo -e "  ${YELLOW}Ollama not found. Installing...${NC}"
+    
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        # macOS
+        if command -v brew &> /dev/null; then
+            brew install ollama
+        else
+            echo -e "  ${RED}✗ Homebrew not found${NC}"
+            echo "    Install Ollama manually: https://ollama.ai"
+            echo ""
+        fi
+    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        # Linux
+        curl -fsSL https://ollama.com/install.sh | sh
+    else
+        echo -e "  ${YELLOW}Please install Ollama manually: https://ollama.ai${NC}"
+    fi
+    
+    if command -v ollama &> /dev/null; then
+        echo -e "  ${GREEN}✓${NC} Ollama installed"
+    fi
+else
+    echo -e "  ${GREEN}✓${NC} Ollama found"
+fi
+
 # Install miyu-cli
 echo ""
-echo -e "  ${YELLOW}Installing from GitHub...${NC}"
+echo -e "  ${YELLOW}Installing miyu-cli from GitHub...${NC}"
 npm install -g github:marceli-to/miyu-cli --silent
 
 echo ""
 echo -e "  ${GREEN}✓ miyu-cli installed!${NC}"
 echo ""
-echo -e "  Run ${CYAN}miyu${NC} to get started."
+echo -e "  Get started:"
+echo -e "    ${CYAN}ollama pull llama3.2${NC}    # download a model"
+echo -e "    ${CYAN}miyu chat${NC}               # start chatting"
 echo ""
-
-# Check for Ollama
-if ! command -v ollama &> /dev/null; then
-    echo -e "  ${YELLOW}Note:${NC} Ollama not found. Install it from https://ollama.ai"
-    echo ""
-fi

@@ -15,7 +15,21 @@ Or via npm:
 npm install -g github:marceli-to/miyu-cli
 ```
 
-Make sure [Ollama](https://ollama.ai) is running locally.
+Requires [Ollama](https://ollama.ai) running locally. The install script will try to install it, or manually:
+
+```bash
+# macOS
+brew install ollama
+
+# Linux
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+Then start Ollama and pull a model:
+```bash
+ollama serve        # start the server (or use the app)
+ollama pull llama3.2  # download a model
+```
 
 ## Usage
 
