@@ -73,7 +73,7 @@ fi
 # Install miyu-cli
 echo ""
 echo -e "  ${YELLOW}Installing miyu-cli from GitHub...${NC}"
-npm install -g github:marceli-to/miyu-cli --silent 2>/dev/null
+npm install -g github:marceli-to/miyu-cli --silent
 
 echo ""
 echo -e "  ${GREEN}✓ miyu-cli installed!${NC}"
